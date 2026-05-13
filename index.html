@@ -1,52 +1,861 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mohammed Arif Ansari | Backend-Focused Full Stack Engineer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #050816;
+      --card: rgba(15, 23, 42, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --muted: #9ca3af;
+      --primary: #38bdf8;
+      --secondary: #0f172a;
+      --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial;
-      text-align: center;
-      margin-top: 100px;
-      background: #f5f5f5;
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
     }
 
-    .card {
-      background: white;
-      width: 400px;
-      margin: auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    body::before {
+      content: '';
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: #2563eb;
+      filter: blur(180px);
+      opacity: 0.12;
+      top: -200px;
+      right: -200px;
+      z-index: -1;
     }
 
-    img {
-      width: 120px;
-      border-radius: 50%;
+    body::after {
+      content: '';
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: #7c3aed;
+      filter: blur(180px);
+      opacity: 0.08;
+      bottom: -200px;
+      left: -200px;
+      z-index: -1;
     }
 
     a {
       text-decoration: none;
-      color: blue;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    section {
+      padding: 110px 0;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(14px);
+      background: rgba(5, 8, 22, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      color: #d1d5db;
+      transition: 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .resume-btn {
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--primary) !important;
+    }
+
+    .resume-btn:hover {
+      background: var(--primary);
+      color: #000 !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-text small {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(52px, 8vw, 88px);
+      line-height: 1.05;
+      margin: 22px 0;
+      font-weight: 800;
+      letter-spacing: -3px;
+    }
+
+    .hero-text h1 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .btn {
+      padding: 16px 28px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* HERO CARD */
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 38px;
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      margin-bottom: 32px;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .stat h2 {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .skill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 12px 18px;
+      border-radius: 40px;
+      color: #d1d5db;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(36px, 5vw, 52px);
+      margin-bottom: 16px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .about-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .about-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+
+    .about-card h3 {
+      margin-bottom: 16px;
+      font-size: 24px;
+      color: var(--primary);
+    }
+
+    .about-card p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      background: rgba(15, 23, 42, 0.35);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 34px;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+
+    .project-tag {
+      display: inline-flex;
+      padding: 8px 16px;
+      border-radius: 40px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
+
+    .project-card h3 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .project-card p {
+      color: #cbd5e1;
+      font-size: 15px;
+      margin-bottom: 26px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .tech {
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.04);
+      color: #cbd5e1;
+      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .project-links a {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 70px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-box h2 {
+      font-size: clamp(36px, 5vw, 56px);
+      margin-bottom: 20px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: auto auto 36px;
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 35px 0;
+      text-align: center;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 1080px) {
+
+      .hero-grid,
+      .project-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 700px;
+      }
+    }
+
+    @media(max-width: 768px) {
+
+      section {
+        padding: 90px 0;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-text p {
+        margin-inline: auto;
+      }
+
+      .hero-card {
+        padding: 28px;
+      }
+
+      .contact-box {
+        padding: 45px 24px;
+      }
+
+      .section-title {
+        margin-bottom: 50px;
+      }
+
+      .about-card,
+      .project-card {
+        padding: 28px;
+      }
+    }
+
+    @media(max-width: 480px) {
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-text h1 {
+        letter-spacing: -1px;
+      }
+
+      .project-card h3 {
+        font-size: 24px;
+      }
     }
   </style>
+
 </head>
+
 <body>
 
-<div class="card">
-  <img src="https://github.com/YOUR_USERNAME.png" />
+  <!-- NAVBAR -->
 
-  <h1>Mohammed Arif Ansari</h1>
+  <nav>
 
-  <p>Full Stack Developer</p>
+    <div class="container nav-wrapper">
 
-  <p>
-    Node.js | MongoDB | React
-  </p>
+      <div class="logo">Mohammed Arif Ansari.</div>
 
-  <a href="https://github.com/aaarif044">
-    GitHub Profile
-  </a>
-</div>
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+        <a href="#" class="resume-btn">
+          Resume
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="hero-text">
+
+        <small>Backend-Focused Full Stack Engineer • 5+ Years Experience</small>
+
+        <h1>
+          Building Modern <br>
+          <span>Scalable Backend</span> <br>
+          Systems
+        </h1>
+
+        <p>
+          I’m Mohammed Arif Ansari, a Backend-Focused Full Stack Developer with 5+ years
+          of experience building enterprise-grade backend systems, scalable APIs,
+          real-time monitoring platforms, cloud-native applications, and DevOps-driven
+          infrastructure using Node.js, MongoDB, Docker, Next.js, and modern technologies.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="btn btn-primary">
+            Explore Projects
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Hire Me
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT CARD -->
+
+      <div class="hero-card">
+
+        <div class="stat">
+          <p>Professional Experience</p>
+          <h2>5+ Years</h2>
+        </div>
+
+        <div class="stat">
+          <p>Projects Delivered</p>
+          <h2>23+</h2>
+        </div>
+
+        <div class="stat">
+          <p>Core Technologies</p>
+        </div>
+
+        <div class="skill-grid">
+
+          <div class="skill">Node.js</div>
+          <div class="skill">MongoDB</div>
+          <div class="skill">Express.js</div>
+          <div class="skill">REST APIs</div>
+          <div class="skill">Redis</div>
+          <div class="skill">Docker</div>
+          <div class="skill">Docker Compose</div>
+          <div class="skill">Jenkins</div>
+          <div class="skill">Linux</div>
+          <div class="skill">AWS</div>
+          <div class="skill">Next.js</div>
+          <div class="skill">React.js</div>
+          <div class="skill">React Native</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">CI/CD</div>
+          <div class="skill">GitHub Actions</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About Me</h2>
+
+        <p>
+          Experienced backend-focused engineer specialized in scalable systems,
+          cloud-native applications, DevOps automation, API architecture,
+          and enterprise-grade infrastructure.
+        </p>
+
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+
+          <h3>Backend Engineering</h3>
+
+          <p>
+            Designing scalable backend architectures, REST APIs,
+            authentication systems, microservices, and enterprise-grade
+            applications using Node.js and modern backend technologies.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>Cloud & DevOps</h3>
+
+          <p>
+            Hands-on experience with Docker, Docker Compose, Linux servers,
+            Jenkins automation, CI/CD pipelines, and cloud deployment workflows.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>Database Optimization</h3>
+
+          <p>
+            Advanced MongoDB expertise including aggregation pipelines,
+            indexing strategies, query optimization, and real-time analytics processing.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>Frontend Development</h3>
+
+          <p>
+            Building responsive modern applications using React.js,
+            Next.js, JavaScript, and dashboard-focused UI systems.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Featured Projects</h2>
+
+        <p>
+          Enterprise-grade platforms and scalable backend systems developed professionally.
+        </p>
+
+      </div>
+
+      <div class="project-grid">
+
+        <!-- PROJECT 1 -->
+
+      <div class="project-card">
+      
+        <div class="project-tag">
+          LIVE PLAYSTORE APPLICATION
+        </div>
+      
+        <h3>Fixler Live Application</h3>
+      
+        <p>
+          Developed Fixler, a scalable service marketplace platform that connects users
+          with trusted local professionals including electricians, plumbers,
+          carpenters, painters, and housekeeping services. Built a real-time backend
+          system with intelligent booking workflows, live status updates,
+          secure API architecture, and scalable infrastructure for handling
+          high-volume service requests and worker management.
+        </p>
+      
+        <div class="tech-stack">
+      
+          <div class="tech">Node.js</div>
+          <div class="tech">Express.js</div>
+          <div class="tech">MongoDB</div>
+          <div class="tech">React.js</div>
+          <div class="tech">React Native</div>
+          <div class="tech">Docker</div>
+          <div class="tech">REST APIs</div>
+          <div class="tech">WebSocket</div>
+          <div class="tech">JWT Auth</div>
+      
+        </div>
+      
+        <div class="project-links">
+      
+          <a href="https://play.google.com/store/apps/details?id=com.fixler&hl=en_IN" target="_blank">
+            ▶ View on Play Store
+          </a>
+      
+          <a href="https://fixler.in" target="_blank">
+            ↗ Visit Website
+          </a>
+      
+        </div>
+      
+      </div>
+        <!-- PROJECT 2 -->
+
+        <div class="project-card">
+
+          <div class="project-tag">
+            REAL-TIME ANALYTICS
+          </div>
+
+          <h3>Enterprise Analytics Dashboard</h3>
+
+          <p>
+            Developed a real-time analytics dashboard with automated reporting,
+            performance tracking, advanced visualizations,
+            and enterprise-level monitoring capabilities.
+          </p>
+
+          <div class="tech-stack">
+
+            <div class="tech">React.js</div>
+            <div class="tech">Express.js</div>
+            <div class="tech">MongoDB</div>
+
+          </div>
+
+        </div>
+
+        <!-- PROJECT 3 -->
+
+        <div class="project-card">
+
+          <div class="project-tag">
+            DEVOPS AUTOMATION
+          </div>
+
+          <h3>CI/CD Deployment Pipeline</h3>
+
+          <p>
+            Automated deployment workflows using Docker,
+            Docker Compose, Jenkins, and Linux infrastructure
+            for scalable production delivery.
+          </p>
+
+          <div class="tech-stack">
+
+            <div class="tech">Docker</div>
+            <div class="tech">Docker Compose</div>
+            <div class="tech">Jenkins</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Let’s Build Something Scalable</h2>
+
+        <p>
+          Available for Backend Engineering, Full Stack Development,
+          Cloud Infrastructure, DevOps, and Enterprise Application Development.
+        </p>
+
+        <div class="hero-buttons" style="justify-content:center;">
+
+          <a href="mailto:aaarif044@gmail.com" class="btn btn-primary">
+            Email Me
+          </a>
+
+          <a href="https://github.com/aaarif044" target="_blank" class="btn btn-outline">
+            GitHub
+          </a>
+
+          <a href="https://linkedin.com/in/aaarif044" target="_blank" class="btn btn-outline">
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Mohammed Arif • Backend-Focused Full Stack Engineer
+  </footer>
 
 </body>
+
 </html>
