@@ -5,26 +5,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mohammed Arif Ansari | Backend-Focused Full Stack Engineer</title>
+  <!-- SEO Primary Meta Tags -->
+  <title>Mohammed Arif Ansari | Senior Backend & Full Stack Engineer</title>
+  <meta name="title" content="Mohammed Arif Ansari | Senior Backend & Full Stack Engineer">
+  <meta name="description" content="Mohammed Arif Ansari is a Senior Backend-Focused Full Stack Engineer with 5+ years experience building scalable microservices, REST APIs, cloud systems, and DevOps pipelines with Node.js, MongoDB, Docker, and Next.js.">
+  <meta name="keywords" content="Mohammed Arif Ansari, Backend Engineer, Full Stack Engineer, Node.js Developer, Scalable Systems, Microservices, DevOps, Software Architect, India">
+  <meta name="author" content="Mohammed Arif Ansari">
+  <meta name="robots" content="index, follow">
+  <!-- <link rel="canonical" href="https://yourportfolio.com" /> -->
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:url" content="https://yourportfolio.com"> -->
+  <meta property="og:title" content="Mohammed Arif Ansari | Senior Backend & Full Stack Engineer">
+  <meta property="og:description" content="Backend-Focused Full Stack Engineer specializing in scalable systems, microservices, cloud deployments, and high-performance Node.js & React architectures.">
+  <!-- <meta property="og:image" content="https://yourportfolio.com/og-image.jpg"> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohammed Arif Ansari | Senior Backend & Full Stack Engineer">
+  <meta name="twitter:description" content="Backend-Focused Full Stack Engineer specializing in scalable systems, microservices, cloud deployments, and high-performance Node.js & React architectures.">
+  <!-- <meta name="twitter:image" content="https://yourportfolio.com/og-image.jpg"> -->
+
+  <!-- Structured Data (JSON-LD) for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Arif Ansari",
+    "jobTitle": "Backend-Focused Full Stack Engineer",
+    "email": "mailto:aaarif044@gmail.com",
+    "url": "https://github.com/aaarif044",
+    "sameAs": [
+      "https://github.com/aaarif044",
+      "https://linkedin.com/in/aaarif044"
+    ],
+    "knowsAbout": [
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Docker",
+      "DevOps",
+      "REST APIs",
+      "React.js",
+      "Next.js",
+      "System Architecture"
+    ]
+  }
+  </script>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #050816;
-      --card: rgba(15, 23, 42, 0.75);
-      --border: rgba(255, 255, 255, 0.08);
-      --text: #ffffff;
-      --muted: #9ca3af;
-      --primary: #38bdf8;
-      --secondary: #0f172a;
-      --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      --bg: #f8fafc;
+      --card-bg: rgba(255, 255, 255, 0.88);
+      --card-hover-bg: #ffffff;
+      --border: rgba(226, 232, 240, 0.9);
+      --border-hover: rgba(37, 99, 235, 0.35);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      
+      --accent-blue: #2563eb;
+      --accent-indigo: #4f46e5;
+      
+      --gradient-text: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #4f46e5 100%);
+      --gradient-btn: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 40px -12px rgba(37, 99, 235, 0.12);
     }
 
     * {
@@ -35,37 +87,16 @@
     }
 
     body {
-      font-family: 'Manrope', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
       overflow-x: hidden;
-      line-height: 1.7;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      width: 600px;
-      height: 600px;
-      background: #2563eb;
-      filter: blur(180px);
-      opacity: 0.12;
-      top: -200px;
-      right: -200px;
-      z-index: -1;
-    }
-
-    body::after {
-      content: '';
-      position: fixed;
-      width: 500px;
-      height: 500px;
-      background: #7c3aed;
-      filter: blur(180px);
-      opacity: 0.08;
-      bottom: -200px;
-      left: -200px;
-      z-index: -1;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+        linear-gradient(to right, rgba(226, 232, 240, 0.5) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.5) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
     }
 
     a {
@@ -73,29 +104,36 @@
       color: inherit;
     }
 
-    img {
-      width: 100%;
-      display: block;
-    }
-
     .container {
-      width: min(1180px, 92%);
+      width: min(1200px, 90%);
       margin: auto;
     }
 
     section {
-      padding: 110px 0;
+      padding: 100px 0;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text-main);
+    }
+
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* NAVBAR */
-
-    nav {
+    header {
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 999;
-      backdrop-filter: blur(14px);
-      background: rgba(5, 8, 22, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(248, 250, 252, 0.85);
       border-bottom: 1px solid var(--border);
     }
 
@@ -107,753 +145,765 @@
     }
 
     .logo {
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+    }
+
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-blue);
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
     }
 
     .nav-links {
       display: flex;
-      gap: 34px;
+      gap: 32px;
       align-items: center;
     }
 
     .nav-links a {
-      font-size: 15px;
-      color: #d1d5db;
-      transition: 0.3s ease;
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
       font-weight: 500;
     }
 
     .nav-links a:hover {
-      color: var(--primary);
+      color: var(--accent-blue);
     }
 
     .resume-btn {
-      padding: 12px 20px;
-      border-radius: 12px;
-      border: 1px solid rgba(56, 189, 248, 0.35);
-      background: rgba(56, 189, 248, 0.08);
-      color: var(--primary) !important;
+      padding: 10px 22px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--text-main) !important;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
     }
 
     .resume-btn:hover {
-      background: var(--primary);
-      color: #000 !important;
+      border-color: var(--accent-blue);
+      color: var(--accent-blue) !important;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+      transform: translateY(-1px);
     }
 
-    /* HERO */
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1000;
+    }
 
+    .hamburger {
+      width: 24px;
+      height: 2px;
+      background: var(--text-main);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: var(--text-main);
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger::before { top: -7px; }
+    .hamburger::after { bottom: -7px; }
+
+    /* Open state for hamburger */
+    .menu-toggle.active .hamburger { background: transparent; }
+    .menu-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
+    .menu-toggle.active .hamburger::after { transform: rotate(-45deg); bottom: 0; }
+
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      position: relative;
-      padding-top: 100px;
+      padding-top: 120px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 70px;
+      gap: 60px;
       align-items: center;
     }
 
-    .hero-text small {
-      color: var(--primary);
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      border-radius: 99px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      margin-bottom: 24px;
+    }
+
+    .status-badge .pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
     }
 
     .hero-text h1 {
-      font-size: clamp(52px, 8vw, 88px);
-      line-height: 1.05;
-      margin: 22px 0;
-      font-weight: 800;
-      letter-spacing: -3px;
-    }
-
-    .hero-text h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
     }
 
     .hero-text p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 720px;
-      margin-bottom: 40px;
+      color: var(--text-muted);
+      font-size: clamp(16px, 1.8vw, 18px);
+      margin-bottom: 36px;
+      font-weight: 400;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 16px;
     }
 
     .btn {
-      padding: 16px 28px;
-      border-radius: 16px;
-      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
       font-size: 15px;
-      transition: 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      touch-action: manipulation;
     }
 
     .btn-primary {
-      background: var(--gradient);
-      color: white;
-      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+      background: var(--gradient-btn);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
     }
 
     .btn-primary:hover {
-      transform: translateY(-4px);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
     }
 
     .btn-outline {
       border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.03);
+      background: #ffffff;
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-outline:hover {
-      border-color: var(--primary);
-      color: var(--primary);
+      border-color: rgba(15, 23, 42, 0.2);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
 
-    /* HERO CARD */
-
+    /* HERO CARD / DASHBOARD */
     .hero-card {
-      background: var(--card);
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 38px;
-      backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-md);
     }
 
-    .stat {
-      margin-bottom: 32px;
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
     }
 
-    .stat p {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 8px;
+    .stat-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
     }
 
-    .stat h2 {
-      font-size: 44px;
-      font-weight: 800;
-      color: var(--primary);
+    .stat-box p {
+      color: var(--text-muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .stat-box h2 {
+      font-size: clamp(28px, 3vw, 34px);
+      font-weight: 700;
+      color: var(--accent-blue);
+    }
+
+    .skill-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 600;
     }
 
     .skill-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 8px;
     }
 
     .skill {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 12px 18px;
-      border-radius: 40px;
-      color: #d1d5db;
-      font-size: 14px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: #334155;
+      font-size: 13px;
       font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .skill:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
     }
 
     /* SECTION TITLE */
-
     .section-title {
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 60px;
     }
 
     .section-title h2 {
-      font-size: clamp(36px, 5vw, 52px);
-      margin-bottom: 16px;
-      font-weight: 800;
-      letter-spacing: -2px;
+      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
 
     .section-title p {
-      color: var(--muted);
-      max-width: 760px;
+      color: var(--text-muted);
+      max-width: 600px;
       margin: auto;
-      font-size: 17px;
+      font-size: clamp(15px, 1.5vw, 17px);
     }
 
-    /* ABOUT */
-
+    /* ABOUT CARDS */
     .about-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+      gap: 24px;
     }
 
     .about-card {
-      background: rgba(15, 23, 42, 0.75);
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 34px;
-      transition: 0.3s ease;
-      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-sm);
     }
 
     .about-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(56, 189, 248, 0.35);
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      background: var(--card-hover-bg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent-blue);
+      font-size: 20px;
     }
 
     .about-card h3 {
-      margin-bottom: 16px;
-      font-size: 24px;
-      color: var(--primary);
+      margin-bottom: 12px;
+      font-size: 20px;
     }
 
     .about-card p {
-      color: #cbd5e1;
+      color: var(--text-muted);
       font-size: 15px;
     }
 
     /* PROJECTS */
-
-    .projects {
-      background: rgba(15, 23, 42, 0.35);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
     .project-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 24px;
     }
 
     .project-card {
-      background: rgba(15, 23, 42, 0.75);
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 34px;
-      transition: 0.3s ease;
-      backdrop-filter: blur(10px);
-      height: 100%;
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
     }
 
     .project-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(56, 189, 248, 0.35);
+      border-color: var(--border-hover);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      background: var(--card-hover-bg);
     }
 
     .project-tag {
-      display: inline-flex;
-      padding: 8px 16px;
-      border-radius: 40px;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--primary);
-      font-size: 12px;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      color: var(--accent-blue);
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     .project-card h3 {
-      font-size: 28px;
-      margin-bottom: 16px;
+      font-size: 22px;
+      margin-bottom: 12px;
       font-weight: 700;
     }
 
     .project-card p {
-      color: #cbd5e1;
-      font-size: 15px;
-      margin-bottom: 26px;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
     }
 
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
+      gap: 6px;
+      margin-bottom: 24px;
     }
 
     .tech {
-      padding: 8px 14px;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.04);
-      color: #cbd5e1;
-      font-size: 13px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(226, 232, 240, 0.8);
     }
 
     .project-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
     }
 
     .project-links a {
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 14px;
+      color: var(--accent-blue);
+      font-weight: 600;
+      font-size: 13px;
+      transition: 0.2s ease;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
     }
 
-    /* CONTACT */
+    .project-links a:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
 
+    /* CONTACT CARD */
     .contact-box {
-      background: rgba(15, 23, 42, 0.75);
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
       border: 1px solid var(--border);
       border-radius: 32px;
-      padding: 70px;
+      padding: 70px 30px;
       text-align: center;
-      backdrop-filter: blur(10px);
+      position: relative;
+      box-shadow: var(--shadow-md);
     }
 
     .contact-box h2 {
-      font-size: clamp(36px, 5vw, 56px);
-      margin-bottom: 20px;
-      font-weight: 800;
-      letter-spacing: -2px;
+      font-size: clamp(32px, 4.5vw, 48px);
+      margin-bottom: 16px;
+      font-weight: 700;
     }
 
     .contact-box p {
-      color: var(--muted);
-      max-width: 760px;
+      color: var(--text-muted);
+      max-width: 600px;
       margin: auto auto 36px;
-      font-size: 18px;
+      font-size: clamp(16px, 1.8vw, 18px);
     }
 
     footer {
-      padding: 35px 0;
+      padding: 36px 0;
       text-align: center;
       color: #94a3b8;
       border-top: 1px solid var(--border);
       font-size: 14px;
     }
 
-    /* RESPONSIVE */
-
-    @media(max-width: 1080px) {
-
-      .hero-grid,
-      .project-grid,
-      .about-grid {
+    /* RESPONSIVE DESIGN & MOBILE MENU */
+    @media (max-width: 1024px) {
+      .hero-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
       }
 
-      .hero-card {
-        max-width: 700px;
-      }
-    }
-
-    @media(max-width: 768px) {
-
-      section {
-        padding: 90px 0;
-      }
-
-      .nav-links {
-        display: none;
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero {
-        text-align: center;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-text p {
-        margin-inline: auto;
-      }
-
-      .hero-card {
-        padding: 28px;
-      }
-
-      .contact-box {
-        padding: 45px 24px;
-      }
-
-      .section-title {
-        margin-bottom: 50px;
-      }
-
-      .about-card,
-      .project-card {
-        padding: 28px;
+        padding-top: 100px;
       }
     }
 
-    @media(max-width: 480px) {
+    @media (max-width: 768px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(248, 250, 252, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 60px;
+        gap: 28px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .about-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
 
       .btn {
         width: 100%;
       }
 
-      .hero-text h1 {
-        letter-spacing: -1px;
-      }
-
-      .project-card h3 {
-        font-size: 24px;
+      .contact-box {
+        padding: 40px 20px;
       }
     }
   </style>
-
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-
-  <nav>
-
+  <!-- HEADER / NAVBAR -->
+  <header>
     <div class="container nav-wrapper">
+      <a href="#" class="logo" aria-label="Mohammed Arif Ansari Homepage">
+        <span class="logo-dot"></span>
+        Mohammed Arif Ansari.
+      </a>
 
-      <div class="logo">Mohammed Arif Ansari.</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+        <span class="hamburger"></span>
+      </button>
 
-      <div class="nav-links">
-
+      <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-
-        <a href="#" class="resume-btn">
-          Resume
-        </a>
-
-      </div>
-
+        <a href="https://drive.google.com/file/d/1sB8Wc7BZbU2K8Oq6QJmQmF_o8gtOmgpt/view?usp=drive_link" class="resume-btn" aria-label="Download Resume">Resume</a>
+      </nav>
     </div>
+  </header>
 
-  </nav>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="container hero-grid">
-
-      <div class="hero-text">
-
-        <small>Backend-Focused Full Stack Engineer • 5+ Years Experience</small>
-
-        <h1>
-          Building Modern <br>
-          <span>Scalable Backend</span> <br>
-          Systems
-        </h1>
-
-        <p>
-          I’m Mohammed Arif Ansari, a Backend-Focused Full Stack Developer with 5+ years
-          of experience building enterprise-grade backend systems, scalable APIs,
-          real-time monitoring platforms, cloud-native applications, and DevOps-driven
-          infrastructure using Node.js, MongoDB, Docker, Next.js, and modern technologies.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#projects" class="btn btn-primary">
-            Explore Projects
-          </a>
-
-          <a href="#contact" class="btn btn-outline">
-            Hire Me
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- RIGHT CARD -->
-
-      <div class="hero-card">
-
-        <div class="stat">
-          <p>Professional Experience</p>
-          <h2>5+ Years</h2>
-        </div>
-
-        <div class="stat">
-          <p>Projects Delivered</p>
-          <h2>10+</h2>
-        </div>
-
-        <div class="stat">
-          <p>Core Technologies</p>
-        </div>
-
-        <div class="skill-grid">
-
-          <div class="skill">Node.js</div>
-          <div class="skill">MongoDB</div>
-          <div class="skill">Express.js</div>
-          <div class="skill">REST APIs</div>
-          <div class="skill">Redis</div>
-          <div class="skill">Docker</div>
-          <div class="skill">Docker Compose</div>
-          <div class="skill">Jenkins</div>
-          <div class="skill">Linux</div>
-          <div class="skill">AWS</div>
-          <div class="skill">Next.js</div>
-          <div class="skill">React.js</div>
-          <div class="skill">React Native</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">CI/CD</div>
-          <div class="skill">GitHub Actions</div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>About Me</h2>
-
-        <p>
-          Experienced backend-focused engineer specialized in scalable systems,
-          cloud-native applications, DevOps automation, API architecture,
-          and enterprise-grade infrastructure.
-        </p>
-
-      </div>
-
-      <div class="about-grid">
-
-        <div class="about-card">
-
-          <h3>Backend Engineering</h3>
-
-          <p>
-            Designing scalable backend architectures, REST APIs,
-            authentication systems, microservices, and enterprise-grade
-            applications using Node.js and modern backend technologies.
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>Cloud & DevOps</h3>
-
-          <p>
-            Hands-on experience with Docker, Docker Compose, Linux servers,
-            Jenkins automation, CI/CD pipelines, and cloud deployment workflows.
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>Database Optimization</h3>
-
-          <p>
-            Advanced MongoDB expertise including aggregation pipelines,
-            indexing strategies, query optimization, and real-time analytics processing.
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <h3>Frontend Development</h3>
-
-          <p>
-            Building responsive modern applications using React.js,
-            Next.js, JavaScript, and dashboard-focused UI systems.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-
-  <section class="projects" id="projects">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>Featured Projects</h2>
-
-        <p>
-          Enterprise-grade platforms and scalable backend systems developed professionally.
-        </p>
-
-      </div>
-
-      <div class="project-grid">
-
-        <!-- PROJECT 1 -->
-
-      <div class="project-card">
-      
-        <div class="project-tag">
-          LIVE PLAYSTORE APPLICATION
-        </div>
-      
-        <h3>Fixler Live Application</h3>
-      
-        <p>
-          Developed Fixler, a scalable local service platform connecting users
-          with verified professionals for home and on-demand services.
-          Built real-time backend systems for booking workflows,
-          worker management, live updates, and secure API infrastructure.
-        </p>
-      
-        <div class="tech-stack">
-      
-          <div class="tech">Node.js</div>
-          <div class="tech">Express.js</div>
-          <div class="tech">MongoDB</div>
-          <div class="tech">React.js</div>
-          <div class="tech">React Native</div>
-          <div class="tech">Docker</div>
-          <div class="tech">REST APIs</div>
-          <div class="tech">WebSocket</div>
-          <div class="tech">JWT Auth</div>
-      
-        </div>
-      
-        <div class="project-links">
-      
-          <a href="https://play.google.com/store/apps/details?id=com.fixler&hl=en_IN" target="_blank">
-            ▶ View on Play Store
-          </a>
-      
-          <a href="https://fixler.in" target="_blank">
-            ↗ Visit Website
-          </a>
-      
-        </div>
-      
-      </div>
-        <!-- PROJECT 2 -->
-
-        <div class="project-card">
-
-          <div class="project-tag">
-            REAL-TIME ANALYTICS
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="status-badge">
+            <span class="pulse"></span>
+            Backend-Focused Full Stack Engineer
           </div>
 
-          <h3>Enterprise Analytics Dashboard</h3>
+          <h1>Architecting <br><span class="gradient-text">High-Scale</span> Systems</h1>
 
           <p>
-            Developed a real-time analytics dashboard with automated reporting,
-            performance tracking, advanced visualizations,
-            and enterprise-level monitoring capabilities.
+            I'm Mohammed Arif Ansari. I specialize in building enterprise-grade backend infrastructure, microservices, cloud deployments, and high-performance applications with Node.js, Next.js, and DevOps workflows.
           </p>
 
-          <div class="tech-stack">
-
-            <div class="tech">React.js</div>
-            <div class="tech">Express.js</div>
-            <div class="tech">MongoDB</div>
-
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Explore Work
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Get in Touch
+            </a>
           </div>
-
         </div>
 
-        <!-- PROJECT 3 -->
-
-        <div class="project-card">
-
-          <div class="project-tag">
-            DEVOPS AUTOMATION
+        <!-- HERO STATS CARD -->
+        <div class="hero-card">
+          <div class="stat-row">
+            <div class="stat-box">
+              <p>Experience</p>
+              <h2>5+ Yrs</h2>
+            </div>
+            <div class="stat-box">
+              <p>Projects</p>
+              <h2>10+</h2>
+            </div>
           </div>
 
-          <h3>CI/CD Deployment Pipeline</h3>
-
-          <p>
-            Automated deployment workflows using Docker,
-            Docker Compose, Jenkins, and Linux infrastructure
-            for scalable production delivery.
-          </p>
-
-          <div class="tech-stack">
-
-            <div class="tech">Docker</div>
-            <div class="tech">Docker Compose</div>
-            <div class="tech">Jenkins</div>
-
+          <p class="skill-title">Core Tech Stack</p>
+          <div class="skill-grid">
+            <span class="skill">Node.js</span>
+            <span class="skill">Express.js</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">Redis</span>
+            <span class="skill">Docker</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Jenkins</span>
+            <span class="skill">Next.js</span>
+            <span class="skill">React Native</span>
+            <span class="skill">CI/CD</span>
           </div>
-
         </div>
-
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <!-- CONTACT -->
-
-  <section id="contact">
-
-    <div class="container">
-
-      <div class="contact-box">
-
-        <h2>Let’s Build Something Scalable</h2>
-
-        <p>
-          Available for Backend Engineering, Full Stack Development,
-          Cloud Infrastructure, DevOps, and Enterprise Application Development.
-        </p>
-
-        <div class="hero-buttons" style="justify-content:center;">
-
-          <a href="mailto:aaarif044@gmail.com" class="btn btn-primary">
-            Email Me
-          </a>
-
-          <a href="https://github.com/aaarif044" target="_blank" class="btn btn-outline">
-            GitHub
-          </a>
-
-          <a href="https://linkedin.com/in/aaarif044" target="_blank" class="btn btn-outline">
-            LinkedIn
-          </a>
-
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Engineering Expertise</h2>
+          <p>Specialized in scaling backends, refining databases, and streamlining DevOps pipelines.</p>
         </div>
 
+        <div class="about-grid">
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">⚡</div>
+            <h3>Backend Architecture</h3>
+            <p>Designing REST & Real-time APIs, microservices architectures, authentication layers, and robust system logic engineered for scale using Node.js.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">☁️</div>
+            <h3>DevOps & Cloud</h3>
+            <p>Streamlining deployments using Docker, Docker Compose, Linux server management, Jenkins CI/CD pipelines, and AWS cloud workflows.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">🗄️</div>
+            <h3>Database Optimization</h3>
+            <p>Advanced NoSQL data modeling with MongoDB, complex aggregation pipelines, performance indexing, and real-time data queries.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">💻</div>
+            <h3>Frontend & Mobile</h3>
+            <p>Creating responsive web applications and mobile apps using modern React.js, Next.js, and React Native platforms.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Projects</h2>
+          <p>A selection of production-ready systems and applications built for scale.</p>
+        </div>
 
-  </section>
+        <div class="project-grid">
+          <!-- PROJECT 1 -->
+          <article class="project-card">
+            <div>
+              <span class="project-tag">Play Store Live</span>
+              <h3>Fixler Ecosystem</h3>
+              <p>A multi-service ecosystem platform connecting users with local service professionals in real-time. Features dynamic booking engines and worker management systems.</p>
+              
+              <div class="tech-stack">
+                <span class="tech">Node.js</span>
+                <span class="tech">MongoDB</span>
+                <span class="tech">React Native</span>
+                <span class="tech">WebSockets</span>
+                <span class="tech">Docker</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=com.fixler&hl=en_IN" target="_blank" rel="noopener noreferrer">Play Store ↗</a>
+              <a href="https://fixler.in" target="_blank" rel="noopener noreferrer">Website ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="project-card">
+            <div>
+              <span class="project-tag">Analytics</span>
+              <h3>Enterprise Analytics</h3>
+              <p>Real-time telemetry and monitoring dashboard featuring aggregated metrics, automated report generation, and role-based access management.</p>
+              
+              <div class="tech-stack">
+                <span class="tech">React.js</span>
+                <span class="tech">Express.js</span>
+                <span class="tech">MongoDB</span>
+                <span class="tech">Redis</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a href="#contact">Internal Platform</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="project-card">
+            <div>
+              <span class="project-tag">Infrastructure</span>
+              <h3>CI/CD Pipeline Engine</h3>
+              <p>Automated containerized delivery infrastructure utilizing Docker Compose, Jenkins, and automated testing suites for high-uptime deployments.</p>
+              
+              <div class="tech-stack">
+                <span class="tech">Docker</span>
+                <span class="tech">Jenkins</span>
+                <span class="tech">Linux</span>
+                <span class="tech">GitHub Actions</span>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a href="#contact">Architecture Spec</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Let's Build Something <span class="gradient-text">Great</span></h2>
+          <p>Currently open for Backend Engineering, Cloud Infrastructure, and Technical Leadership opportunities.</p>
+
+          <div class="hero-buttons" style="justify-content: center;">
+            <a href="mailto:aaarif044@gmail.com" class="btn btn-primary" aria-label="Send Email">Email Me</a>
+            <a href="https://github.com/aaarif044" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="GitHub Profile">GitHub</a>
+            <a href="https://linkedin.com/in/aaarif044" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="LinkedIn Profile">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
-
   <footer>
-    © 2026 Mohammed Arif Ansari • Backend-Focused Full Stack Engineer
+    <div class="container">
+      © 2026 Mohammed Arif Ansari. All rights reserved.
+    </div>
   </footer>
 
-</body>
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when a navigation link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
 </html>
